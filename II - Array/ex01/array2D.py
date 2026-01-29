@@ -1,3 +1,6 @@
+import numpy as np
+
+
 def slice_me(family: list, start: int, end: int) -> list:
     """
     'slice_me' takes as parameters a 2D array, prints its shape,
@@ -13,12 +16,12 @@ def slice_me(family: list, start: int, end: int) -> list:
     :return: new sliced list
     :rtype: list
     """
-    type_ = [isinstance(i, list) for i in family]
-    dimontion = [len(i) == len(family[0]) for i in family]
-    if False in dimontion or False in type_:
+    arr = np.array(family)
+    dim = arr.shape
+    if dim[0] * dim[1] != arr.size or arr.dtype.type != np.float64:
         print(AssertionError("AssertionError: arrays are not equal"))
         exit(1)
-    print(f"My shape is : ({len(family)}, {len(family[1])})")
+    print(f"My shape is : {dim}")
     new = family[start:end]
-    print(f"My new shape is : ({len(new)}, {len(new[0])})")
+    print(f"My new shape is : {np.shape(new)}")
     return new
