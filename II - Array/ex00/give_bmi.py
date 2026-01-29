@@ -41,7 +41,7 @@ def give_bmi(height: list[int | float], weight: list[int | float]) -> \
 
 
 def apply_limit(bmi: list[int | float], limit: int) -> list[bool]:
-    '''
+    """
     'apply_limit' checks the reality of a list of a calculated 'mbi' over
     an int; a 'limit', true if it is above the limiter and false if it is under
 
@@ -51,7 +51,7 @@ def apply_limit(bmi: list[int | float], limit: int) -> list[bool]:
     :type limit: int
     :return: list of result (true or false)
     :rtype: list[bool]
-    '''
+    """
     type_ = [type_check(b) for b in bmi]
     type_ += [isinstance(limit, int)]
     if not bmi or False in type_:

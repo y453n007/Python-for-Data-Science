@@ -13,7 +13,6 @@ def slice_me(family: list, start: int, end: int) -> list:
     :return: new sliced list
     :rtype: list
     """
-
     type_ = [isinstance(i, list) for i in family]
     dimontion = [len(i) == len(family[0]) for i in family]
     if False in dimontion or False in type_:
