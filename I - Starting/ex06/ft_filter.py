@@ -1,16 +1,11 @@
 def ft_filter(func, iterable):
-    """Filters elements from an iterable based on a function's logic.
+    """
+    [0, 2, 4]
+    [1, 2, 3, 4]
+    filter(function or None, iterable) --> filter object
 
-    This function yielding items for which the provided function returns True.
-    If the function is None, it yields items that are truthy.
-
-    :params
-        func: (callable or None) - A function that returns a boolean.
-        iterable: (iterable) - A collection of items (list, range, etc.) 
-            to be filtered.
-
-    :yields:
-        Any: The next item in the iterable that satisfies the condition.
+    Return an iterator yielding those items of iterable for which function(item)
+    is true. If function is None, return the items that are true.
     """
 
     for item in iterable:
